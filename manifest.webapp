@@ -1,0 +1,23 @@
+{
+    "launch_path": "/index.html",
+    "installs_allowed_from": [
+        "*"
+    ],
+    "version": "0.0.1",
+    "name": "HalloweenBlast",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "developer": {
+        "name": "Apache Cordova Team",
+        "url": "http://cordova.io"
+    },
+    "permissions": {
+        "browser": {
+            "description": "Enables the app to implement a browser in an iframe."
+        }
+    },
+    "type": "privileged",
+    "icons": {
+        "60": "/icon/icon-60.png",
+        "128": "/icon/icon-128.png"
+    }
+}

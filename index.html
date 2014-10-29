@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; width=device-width" />
+
+
+        <meta charset="utf-8">
+
+
+        <link rel="stylesheet" href="assets/creepsville/stylesheet.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="assets/styles.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="js/app-ui/viewnavigator/viewnavigator.css" type="text/css" charset="utf-8">
+    </head>
+
+
+    <body style="background-color:#000;">
+
+      <div id="loading">
+          LOADING...
+      </div>
+
+
+
+
+
+    </body>
+
+
+    <script type="text/javascript" src="js/app-ui/viewnavigator/viewnavigator.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.animate-enhanced.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/NativeUtil.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script id="mainViewTemplate">
+
+        <div style="height:50px">&nbsp;</div>
+
+        <div class="row">
+            <div id="ambientSounds">
+            {{#ambient}}
+                <div id="{{id}}" class="ambientLi cell {{#playing}}active{{/playing}}">
+                    &nbsp;
+                    <svg width="20px" height="20px" id="playIcon"><g>
+                        <polygon points="0.5,0.5 19.5,10.5 0.5,19.5 0.5,0.5" />
+                    </g></svg>
+                    <svg width="20px" height="20px" id="stopIcon"><g>
+                        <polygon points="0.5,0.5 19.5,0.5 19.5,0.5 19.5,19.5 0.5 19.5 0.5,0.5" />
+                    </g></svg>
+                    {{label}}  <span class="right">∞</span>
+                </div>
+            {{/ambient}}
+            </div>
+        </div>
+
+        <div class="headingSection">Effects</div>
+        <div class="row">
+            <div id="soundEffects" class="multicolumn">
+            {{#effects}}
+                <div id="{{id}}" class="effectLi cell {{#playing}}active{{/playing}}">
+                    &nbsp;
+                    <svg width="20px" height="20px"><g>
+                        <polygon points="0.5,0.5 19.5,10.5 0.5,19.5 0.5,0.5" />
+                    </g></svg>
+                    {{label}}
+
+                    <span class="stop" id="stop_{{id}}">
+                        <img src="assets/images/stop.svg" id="stop_{{id}}" />
+                    </span>
+                </div>
+            {{/effects}}
+            </div>
+        </div>
+
+    </script>
+
+    <script id="aboutViewTemplate">
+
+        <br/>
+        <br/>
+        <div id="about">
+            <p>"HalloweenBlast" is a fun holiday application to help you scare the pants off of your friends!  Use it to create a creepy ambiance, or play scary Halloween sound effects to liven up any situation.</p>
+
+            <p>HalloweedBlast is a free and open source application built using <a href="http://www.phonegap.com" target="_blank">Cordova</a>.  </p>
+
+            <h2>Attribution:</h2>
+
+            <h4>Sounds</h4>
+            <p>All sounds used within this application are available as creative-commons assets from <a href="http://www.freesound.org">http://www.freesound.org</a>.  </p>
+
+
+            <h4>Font</h4>
+            <p>The font used within this application is "Creepsville", available for free at:
+            <a href="http://www.fontfreak.com/font_Creepsville.htm?customt=&psize=50<">http://www.fontfreak.com/font_Creepsville.htm?customt=&psize=50</a>.
+            The TTF font was converted for in-browser use with <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a>.</p>
+
+            <h4>Skull Icon</h4>
+            <p>The "Skull" icon used by this application by <a href="http://thenounproject.com/noun/skull/#icon-No4522">Tim Piper, from The Noun Project</a></p>
+        </div>
+        <footer></footer>
+    </script>
+</html>

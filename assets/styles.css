@@ -1,0 +1,297 @@
+
+
+body {
+    /*
+    font-family: 'creepsvilleregular'; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    background-color:#555;
+    color: #FF7F00;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.viewNavigator_header_title {
+    font-family: 'creepsvilleregular';
+    font-size: 1.5em;
+
+}
+
+
+body, html {
+    margin:0px;
+    height: 100%;
+    oveflow: hidden;
+}
+
+
+#body {
+    width:100%;
+
+/*
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);*/
+}
+
+a {
+    color: black;
+}
+a:hover {
+    color: white;
+}
+
+.stop {
+    display: none;
+    position: absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    width:1.5em;
+    min-width:50px;
+    border: none;
+}
+
+.active .stop {
+    display: block;
+}
+
+.multicolumn {
+}
+
+@media (min-width: 600px) {
+    .multicolumnList
+    {
+        -moz-column-count:2; /* Firefox */
+        -webkit-column-count:2; /* Safari and Chrome */
+        column-count:2;
+
+        -moz-column-gap:20px; /* Firefox */
+        -webkit-column-gap:20px; /* Safari and Chrome */
+        column-gap:20px;
+    }
+}
+
+
+
+.headingSection {
+    background: #000;
+    color: #825000;
+    padding:0px;
+    margin: 0px;
+    clear:both;
+}
+
+#ambientSounds,
+#soundEffects{
+    padding:0;
+    margin:0;
+    margin-left:0px;
+    border:none;
+    list-style-type: none;
+}
+
+#ambientSounds div polygon, #soundEffects div polygon {
+
+    vertical-align: middle;
+    fill:#FF7F00;
+}
+
+#ambientSounds div.active polygon, #soundEffects div.active polygon {
+
+    fill:#000;
+}
+
+#stopIcon {
+    fill:#000;
+}
+
+
+#ambientSounds div #stopIcon, #soundEffects div #stopIcon {
+
+    display: none;
+    visibility: hidden;
+}
+
+#ambientSounds div.active #stopIcon, #soundEffects div.active #stopIcon {
+
+    display: inline;
+    visibility: visible;
+}
+
+
+#ambientSounds div #playIcon, #soundEffects div #playIcon {
+
+    display: inline;
+    visibility: visible;
+}
+
+#ambientSounds div.active #playIcon, #soundEffects div.active #playIcon {
+
+    display: none;
+    visibility: hidden;
+}
+
+
+#ambientSounds div,
+#soundEffects div,
+li {
+    padding:0px;
+    padding-top:10px;
+    position: relative;
+    font-size: 1em;
+    height:40px;
+/*
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);*/
+    font-size: 1.5em;
+}
+
+div.effectLi  {
+    /*background-image: url("images/play.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;   */
+    background-color: #111;
+    color:#FF7F00;
+}
+
+div.ambientLi {
+    /*background-image: url("images/play.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;   */
+    background-color: #111;
+    color:#FF7F00;
+}
+
+.ambientLi.active {
+    /*background-image: url("images/stop.jpg");*/
+}
+
+div.effectLi.active,
+div.ambientLi.active {
+    background-color: #FF7F00;
+    color:#000;
+}
+
+#loading {
+    margin-top:3em;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: #FF7F00;
+    text-shadow: 0.1em 0.1em 0.05em #000;
+}
+
+/*
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+    #wrapper {
+        padding: 50px 25px 25px 25px;
+    }
+}*/
+
+.row {
+	display:block;
+	width:100%;
+}
+
+.cell {
+	float:left;
+	margin-left:0px;
+}
+
+
+#aboutButton {
+    margin: 1em;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    background: #444;
+    color:#FF7F00;
+    font-family: arial;
+    font-size: 1.25em;
+}
+
+#back {
+    margin: 0px;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    color: #000;
+    background:#FF7F00;
+    font-family: arial;
+    font-size: 1.25em;
+    margin-right:20px;
+    margin-bottom: 20px;
+}
+
+#about {
+    font-family: arial;
+    color: white;
+    font-size: 0.5em;
+    padding:20px;
+}
+
+#about a{
+    color: #FF7F00;
+}
+
+#about li{
+    border: none;
+    padding:0px .5em;
+}
+
+.normalList {
+    list-style: circle;
+}
+
+.normalList li {
+	text-indent:0px;
+    margin:0px;
+    padding:0px;
+}
+
+
+.tabbar {
+    border: 1px solid orange;
+    height: 30px;
+    list-style-type:none;
+    margin:10px;
+    padding:0;
+
+    border-radius: 10px;
+}
+
+.tabbar li {
+    border-right: 1px solid orange;
+    height: 30px;
+    float: left;
+    margin-left: 0px;
+    line-height: 28px;
+    padding: 0px;
+    width: 33%;
+    text-align: center;
+}
+.tabbar li:last-child
+{
+    border-right: none;
+}
+
+.tabbar li.selected {
+    background: orange;
+    color:black;
+}
+
+.right {
+    position: absolute;
+    right:8px;
+    top:8px;
+}
