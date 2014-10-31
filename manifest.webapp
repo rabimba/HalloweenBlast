@@ -5,10 +5,10 @@
     ],
     "version": "0.0.1",
     "name": "HalloweenBlast",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "description": "A FirefoxOS app to make your Halloween Party more scary!",
     "developer": {
-        "name": "Apache Cordova Team",
-        "url": "http://cordova.io"
+        "name": "Rabimba Karanjai",
+        "url": "http://rabimba.com"
     },
     "permissions": {
         "browser": {
